@@ -57,7 +57,7 @@ def main():
 
 """
 para usar pycodestyle ejecutar el comando
-pycodestyle --first Tienda1\template.py
+pycodestyle --first template.py
 """
 # Llamamos a la función principal
 if __name__ == "__main__":
