@@ -43,11 +43,18 @@ def mostrar_productos(productos):
     headers = ["Nombre", "Precio", "Cantidad", "descripcion", "clasificacion"]
     # Imprimimos la cabecera de la tabla
     print("\nDatos de los productos ingresados:")
-    print(f"{headers[0]:<15} {headers[1]:<20} {headers[2]:<15} {headers[3]:<20} {headers[4]:<30}")
+    print(
+        f"{headers[0]:<15} {headers[1]:<20} {headers[2]:<15}"
+        f"{headers[3]:<20} {headers[4]:<30}")
     # Mostramos los productos con formato de tabla
     for producto in productos:
-        nombre, precio, cantidad, descripcion, clasificacion = producto.obtener_datos()
-        print(f"{nombre:<15} {precio:<20} {cantidad:<15} {descripcion:<20} {clasificacion:<30}")
+        (
+            nombre, precio, cantidad,
+            descripcion, clasificacion
+        ) = producto.obtener_datos()
+        print(
+            f"{nombre:<15} {precio:<20} {cantidad:<15}"
+            f"{descripcion:<20} {clasificacion:<30}")
 
 
 def mostrar_productos_agrupados(productos):
@@ -80,7 +87,7 @@ def main():
 
 """
 para usar pycodestyle ejecutar el comando
-pycodestyle --first template.py
+pycodestyle --first Tienda2/template.py
 """
 # Llamamos a la función principal
 if __name__ == "__main__":
