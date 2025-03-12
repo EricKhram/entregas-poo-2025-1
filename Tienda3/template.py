@@ -10,7 +10,6 @@ Autor: Erick Lopez
 Fecha: 2025-02-27
 """
 
-
 class Producto:
     """creacion de la clase"""
     def __init__(self, nombre, precio, cantidad, descripcion, clasificacion, tti, pcu):
@@ -33,7 +32,6 @@ class Producto:
                 f"{self.pcu}"]
         
 
-
 def ingresar_producto():
     nombre = input("Ingrese el nombre del producto: ")
     precio = float(input(f"Cual es el precio de '{nombre}'?: "))
@@ -53,6 +51,9 @@ def mostrar_productos(productos):
     print(
         f"{headers[0]:<15} {headers[1]:<20} {headers[2]:<15}"
         f"{headers[3]:<30} {headers[4]:<20} {headers[5]:<20} {headers[6]:<20}")
+    #linea divisoria entre encabezados de la tabla y contenidos
+    print("-----------------------------------------------------------------"
+            "---------------------------------------------------------------")
     # Mostramos los productos con formato de tabla
     for producto in productos:
         (
@@ -62,7 +63,7 @@ def mostrar_productos(productos):
         print(
             f"{nombre:<15} {precio:<20} {cantidad:<15}"
             f"{descripcion:<30} {clasificacion:<20} {tti:<20} {pcu:<20}")
-
+        
 
 def mostrar_productos_agrupados(productos):
     # Diccionario para almacenar la suma de precios por clasificación
@@ -99,3 +100,4 @@ pycodestyle --first Tienda2/template.py
 # Llamamos a la función principal
 if __name__ == "__main__":
     main()
+    
