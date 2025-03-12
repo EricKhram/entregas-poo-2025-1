@@ -28,8 +28,8 @@ class Producto:
                 f"{self.cantidad} unidades",
                 f"{self.descripcion}",
                 f"{self.clasificacion}",
-                f"{self.tti}",
-                f"{self.pcu}"]
+                f"{self.tti:.2f} COP",
+                f"{self.pcu:.2f} COP"]
         
 
 def ingresar_producto():
@@ -45,15 +45,15 @@ def ingresar_producto():
 
 def mostrar_productos(productos):
     # Encabezados de la tabla
-    headers = ["Nombre", "Precio", "Cantidad", "descripcion", "clasificacion", "total en inventario", "precio x 5 unidades"]
+    headers = ["Nombre", "Precio", "Cantidad", "descripcion", "clasificacion", "total en inventario", "preciox5"]
     # Imprimimos la cabecera de la tabla
     print("\nDatos de los productos ingresados:")
     print(
         f"{headers[0]:<15} {headers[1]:<20} {headers[2]:<15}"
-        f"{headers[3]:<30} {headers[4]:<20} {headers[5]:<20} {headers[6]:<20}")
+        f"{headers[3]:<30} {headers[4]:<18} {headers[5]:<20} {headers[6]}")
     #linea divisoria entre encabezados de la tabla y contenidos
-    print("-----------------------------------------------------------------"
-            "---------------------------------------------------------------")
+    print("---------------------------------------------------------------"
+            "-------------------------------------------------------------------")
     # Mostramos los productos con formato de tabla
     for producto in productos:
         (
@@ -62,7 +62,7 @@ def mostrar_productos(productos):
         ) = producto.obtener_datos()
         print(
             f"{nombre:<15} {precio:<20} {cantidad:<15}"
-            f"{descripcion:<30} {clasificacion:<20} {tti:<20} {pcu:<20}")
+            f"{descripcion:<30} {clasificacion:<18} {tti:<20} {pcu}")
         
 
 def mostrar_productos_agrupados(productos):
