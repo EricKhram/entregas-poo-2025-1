@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Título de práctica: Ejercicio Tienda2
+Título de práctica: Ejercicio Tienda3
 
 Descripción extendida del programa
 
