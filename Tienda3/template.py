@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
 """
-Título de práctica: Ejercicio Tienda1
+Título de práctica: Ejercicio Tienda2
 
 Descripción extendida del programa
 
 Autor: Erick Lopez
 <eslopezf@academia.usbbog.edu.co>
-Fecha: 2025-02-27
+Fecha: 2025-03-17
 """
 
 class Producto:
@@ -93,10 +93,6 @@ def main():
     mostrar_productos_agrupados(productos)
 
 
-"""
-para usar pycodestyle ejecutar el comando
-pycodestyle --first Tienda2/template.py
-"""
 # Llamamos a la función principal
 if __name__ == "__main__":
     main()
